@@ -1,0 +1,315 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - how are you today?
+    - how are you?
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - have fun!
+    - get lost
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - fine
+    - ok
+    - nice
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - i'm good
+    - i am good 
+    - good
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+- intent: useless_questions 
+  examples: |
+    - tell me the nearest resort
+    - i am getting bored.
+    - what should i do ?
+  
+
+- intent: Talking_lands
+  examples: |
+    - show me some plots
+    - Talking lands
+    - bring me some plots
+    - show me some property.
+    - i am excited to see some properties could you help me?
+    - could you help me to see some properties?
+    - book me a plot
+    - bring  me some property
+
+
+- intent: area
+  examples: |
+    - Kolkata
+    - Chennai
+    - delhi
+    - kashmir
+
+
+- intent: Farms
+  examples: |
+    - farms
+    - FARMS
+    - farm
+    - F
+    - f
+    - village
+    - rural
+    - far from city
+    - what is the closest farm plots near my location?
+
+
+
+- intent: resedentials
+  examples: |
+    - resedentials
+    - Resedentials
+    - City
+    - R
+    - C
+    - Crowdy
+    - ok now show me some city properties
+    - Near metro city
+    - Can I find a project near the highway?
+    - Close to airport
+    - close to Station
+    - near ring road
+
+
+- intent: TL_login
+  examples: |
+    - I want to register 
+    - register yourself 
+    - help me to login
+    - give me login details
+    - log_in
+    - sign_up
+
+- intent: pricing
+  examples: |
+    - what is the Registration fee?
+    - how much it's going to cost me ?
+    - tell me something about charges.
+    - what's the minimum price for the plots?
+    - what's the starting price for the plots?
+    - what's the maximum price for the plots?
+    - What is the minimum price for a plot in this project?
+    - money?
+    - paisa?
+    - Rokhra
+    - Khoka
+    - what are the standart charges?
+
+- intent: payment
+  examples: |
+    - how can i make payment?
+    - kitna paisa dena hai?
+    - where should i pay?
+    - how should  I pay?
+    - share me the payment details
+
+
+
+- intent: TL_TALES 
+  examples: |
+    - What is talking Talking lands Tales?
+    - how does TL tales works
+
+- intent: TL_Lens 
+  examples: |
+    - What is talking Talking lands lens?
+    - what is TL lens?
+    - TL lens
+    - Lens
+    - Talking Lands lens 
+    - how does TL Lens works?
+    - how does Talking lands Lens works?
+
+
+
+- intent: TL_Lens_Move
+  examples: |
+    - can i move TL Lens around?
+    - move TL Lens
+    - is it possible to move TL lens?
+    - Can i adjust the radius of TL Lens?
+    - Can I increase or decrease the radius of the TL Lens?
+
+
+
+- intent: TL_Contacts 
+  examples: |
+    - how can i contact you ?
+    - how to connect you?
+    - i want to contact you .
+    - share me the contact details 
+
+
+- intent: TL_Support 
+  examples: |
+    - how can fix my problems?
+    - help me!
+    - failed to find the solutions .
+    - share your support details. 
+    - share your contact  details.
+
+- intent: TL_About 
+  examples: |
+    - tell me more about you ?
+    - i want to know more .
+    - share me some details about yourself 
+    - what does it all about
+
+
+
+- intent: Company 
+  examples: |
+    - company
+    - Company
+    - C
+    - COMPANY
+    - companies
+    - tell me more about your company ?
+    - i want to know more about company .
+    - share me some details about your company 
+    - what is your company all about?
+
+
+- intent: Teams 
+  examples: |
+    - teams
+    - TEAMS
+    - T
+    - t
+    - tell me more about your teams ?
+    - i want to know more about teams .
+    - share me some details about your teams 
+    - what is your teams all about?
+
+
+
+
+- intent : Book_plot
+  examples: |
+   - how to book a plot?
+   - how can i book a plot?
+   - i want to book plots.
+   - book me some  plots
+   - what is the minimum plot size available
+   - what is the maximum plot size available
+   - i want to see some plots
+   
+- intent : canal
+  examples: |
+   - Can I find a plot near the flowing canal?
+   - is it possible to book a plot near canal?
+   - i want to book plots near canal
+   - book me some  plots near canal
+   - what is the minimum plot size available near canal
+   - what is the maximum plot size available near canal
+   - i want to see some plots nedar canal
+
+- intent : Diff_Color
+  examples: |
+   - What do the different colors of the plots signify?
+   - Where can I view this color code?
+   - what are these colours represent?
+   - what are these different colours?
+   - why there are so many colours?
+
+
+
+- intent : facing
+  examples: |
+   - Can I find a north-facing plot?
+   - Can I find a South-facing plot?
+   - Can I find a east-facing plot?
+   - Can I find a west-facing plot?
+   - North
+   - South
+   - East
+   - West
+
+

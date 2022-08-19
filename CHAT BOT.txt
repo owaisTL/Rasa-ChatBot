@@ -1,0 +1,164 @@
+nlu.yml
+
+
+
+- intent: useless_questions 
+  examples: |
+    - tell me the nearest resort
+    - i am getting bored.
+    - what should i do ?
+  
+
+- intent: Talking_lands
+  examples: |
+    - show me some plots
+    - Talking lands
+    - bring me some plots
+    - what does it all about?
+    - show me some property.
+    - show me some property.
+
+
+- intent: TL_login
+  examples: |
+    - I want to register 
+    - register yourself 
+    - help me to login
+    - give me login details
+    - log_in
+    - sign_up
+
+- intent: pricing
+  examples: |
+    - what is the Registration fee?
+    - how much it's going to cost me ?
+    - tell me something about charges.
+    - money?
+    - what is the standart charges?
+
+
+
+- intent: TL_TALES 
+  examples: |
+    - What is talking Talking lands Tales?
+    - how does TL tales works
+
+
+- intent: TL_Contacts 
+  examples: |
+    - how can i contact you ?
+    - i want to contact you .
+    - share me the contact details 
+
+- intent: TL_About 
+  examples: |
+    - tell me more about you ?
+    - i want to know more .
+    - share me some details about yourself 
+    - what is your company all about 
+    - your team ? 
+
+rules.yml
+
+- rule: Say 'I answer on real-state related questions' anytime the user challenges
+  steps:
+  - intent: useless_questions
+  - action: utter_I_answer_on_real-state_related_questions
+
+
+
+stories.yml story: sad path 3
+  steps:
+  - intent: useless_questions
+  - action: utter_I_answer_on_real-state_related_questions
+
+
+
+- story: talking lands  path 1
+  steps:
+  - intent: Talking_lands
+  - action: utter_TL_is 
+  - action: utter_Did_that_help_you?
+
+
+- story: talking lands  path 2
+  steps:
+  - intent: TL_login
+  - action: utter_TL_login_is 
+
+
+
+- story: talking lands  path 3
+  steps:
+  - intent: 
+  - action: utter_TL_Price_details_is 
+
+
+
+
+- story: talking lands  path 4
+  steps:
+  - intent: TL_TALES
+  - action: utter_TL_TALES_IS
+
+
+- story: talking lands  path 5
+  steps:
+  - intent: TL_Contacts
+  - action: utter_TL_contacts_is
+
+
+
+- story: talking lands  path 6
+  steps:
+  - intent: TL_About
+  - action: utter_TL_About_is
+
+
+
+
+domain.yml
+
+intents:
+
+- Talking_lands
+  - TL_login
+  - pricing
+  - TL_TALES
+  - TL_Contacts
+  - TL_About
+  - useless_questions
+
+  responses:
+
+
+
+utter_TL_login_is:
+  - text: "you can click on this link for login  https://talkinglands.com/Login"
+
+  utter_TL_Price_details_is :
+  - text: "we have a very competitive pricing strategy you can check it https://talkinglands.com/Pricing"
+
+  utter_TL_TALES_IS:
+  - text: "we built a very exciting features TL Tales, you can explore https://talkinglands.com/OurFeatures"
+
+
+  utter_TL_contacts_is:
+  - text: "here you can contact us https://talkinglands.com/Contact"
+
+
+  utter_TL_About_is:
+  - text: "here what we do  https://talkinglands.com/Ourcompany"
+
+  
+
+
+
+
+  utter_TL_is:
+  - text: "What kind of properties are you  interested in? Farm plots or Residentials plots?"
+
+  utter_Did_that_help_you?:
+  - text: "Did that helped you?"
+
+

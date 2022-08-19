@@ -1,0 +1,145 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+- story: talking lands  path 1
+  steps:
+  - intent: Talking_lands
+  - action: utter_which_area
+
+- story: place
+  steps:
+  - intent: area
+  - action: utter_TL_IS
+  
+
+- story: farms area
+  steps:
+  - intent: Farms
+  - action: utter_Farms_area
+
+
+- story: Resendetials Area
+  steps:
+  - intent: resedentials
+  - action: utter_resedentials_area
+
+- story: Talking Lands Sign-up
+  steps:
+  - intent: TL_login
+  - action: utter_TL_login
+
+
+- story: Price
+  steps:
+  - intent: pricing
+  - action: utter_pricing_is
+
+- story: payment_is
+  steps:
+  - intent: payment
+  - action: utter_pay_is
+
+
+- story: Tales
+  steps:
+  - intent: TL_TALES
+  - action: utter_tales
+
+- story: Lens
+  steps:
+  - intent: TL_Lens
+  - action: utter_lens
+
+
+- story: Lens_Move
+  steps:
+  - intent: TL_Lens_Move
+  - action: utter_lens_Move
+
+
+
+
+- story: Touch
+  steps:
+  - intent: TL_Contacts
+  - action: utter_Contacts
+
+- story: Talking Lands Support
+  steps:
+  - intent: TL_Support
+  - action: utter_TL_Support
+  - action: utter_did_that_help
+
+
+
+- story: Talking Lands about
+  steps:
+  - intent: TL_About
+  - action: utter_TL_About_is
+
+
+- story: Talking Lands company
+  steps:
+  - intent: Company
+  - action: utter_TL_company_is
+
+- story: Talking Lands Teams
+  steps:
+  - intent: Teams
+  - action: utter_TL_Teams_is
+
+
+
+- story: plot Booking
+  steps:
+  - intent: Book_plot
+  - action: utter_BOOK_PLOT
+
+- story: plot canal
+  steps:
+  - intent: canal
+  - action: utter_BOOK_canal
+
+
+- story: colorCode
+  steps:
+  - intent: Diff_Color
+  - action: utter_DColour
+
+
+- story: face
+  steps:
+  - intent: facing
+  - action: utter_FaceTo
+
+
+

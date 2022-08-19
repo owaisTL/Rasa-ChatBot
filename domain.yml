@@ -1,0 +1,133 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - useless_questions
+  - Talking_lands
+  - Farms
+  - resedentials
+  - TL_login
+  - pricing
+  - payment
+  - TL_TALES
+  - TL_Lens 
+  - TL_Lens_Move
+  - TL_Contacts
+  - TL_About
+  - Company
+  - Teams
+  - TL_Support  
+  - Book_plot
+  - canal
+  - Diff_Color
+  - facing
+  - area
+
+
+responses:
+
+  utter_greet:
+  - text: "Hey! How may I help you?"
+
+
+  
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+
+  utter_goodbye:
+  - text: "alright! hope see you soon!"
+
+
+  utter_iamabot:
+  - text: "I am  TalkyBot by Talking Lands."
+
+  utter_which_area:
+  - text: "At which city are you looking for property"
+
+
+  utter_TL_IS:
+  - text: "what kind of properties are you interested in? Farms/Resdedntials"
+
+
+  
+
+
+  utter_Farms_area:
+  - text: "https://talkinglands.com/plots?Layouttype=CT0"
+
+  utter_resedentials_area:
+  - text: "https://talkinglands.com/plots?Layouttype=CT1"
+
+  utter_TL_login:
+  - text: "click here! https://talkinglands.com/Login"
+
+  utter_pricing_is:
+  - text: "click here! https://talkinglands.com/Pricing"
+  
+  utter_pay_is:
+  - text: "click here to pay! https://talkinglands.com/Pricing"
+
+
+  utter_tales:
+  - text: "Click here to view the tutorial - https://talkinglands.com/OurFeatures"
+
+  utter_lens:
+  - text: "Click here to view the tutorial on how to use the TL Lens feature - https://talkinglands.com/OurFeatures"
+  
+  utter_lens_Move:
+  - text: "yes; you can"
+
+  utter_Contacts:
+  - text: "get in touch with us! https://talkinglands.com/Contact"
+
+
+  utter_TL_About_is:
+  - text: "what would you like  to know?  about  company or our Team?"
+
+  utter_TL_company_is:
+  - text: "https://talkinglands.com/Ourcompany"
+
+  utter_TL_Teams_is:
+  - text: "https://talkinglands.com/Ourteam"
+
+  utter_TL_Support:
+  - text: "mail us at support@gims.co"
+  - text: " call us @ 8549949999"
+
+
+  utter_BOOK_PLOT:
+  - text: "we will add soon"
+
+  utter_BOOK_canal:
+  - text: " yes, click here! https://hosachiguru.talkinglands.com/plots/HC-SAM https://hosachiguru.talkinglands.com/plots/HC-DHN https://hosachiguru.talkinglands.com/plots/HC-ABV https://hosachiguru.talkinglands.com/plots/HC-ECH"
+
+  utter_DColour:
+  - text: "Green- Available  Yellow- Soft Blocked Purple- Blocked Orange- Reserved Red- Sold"
+
+  utter_FaceTo:
+  - text: "Yes;You can filter on the basis of facing." 
+
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
