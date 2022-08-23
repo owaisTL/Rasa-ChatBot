@@ -44,7 +44,22 @@ stories:
 - story: farms area
   steps:
   - intent: Farms
+    entities:
+      - farm_type: "farms"
+  - slot_was_set:
+      - farm_type: "farm"
   - action: utter_Farms_area
+
+- story: My_farms to
+  steps:
+  - intent: MY_Farms
+  - action: utter_Farms_TO
+
+
+- story: HosaFarms
+  steps:
+  - intent: Hosachiguru
+  - action: utter_Hosa
 
 
 - story: Resendetials Area
@@ -60,8 +75,13 @@ stories:
 
 - story: Price
   steps:
-  - intent: pricing
-  - action: utter_pricing_is
+  - intent: DEvpricing
+  - action: utter_DEVpricing_is
+
+- story: prop price
+  steps:
+  - intent: prop_pricing
+  - action: utter_PropPricing
 
 - story: payment_is
   steps:
@@ -85,6 +105,11 @@ stories:
   - intent: TL_Lens_Move
   - action: utter_lens_Move
 
+
+- story: Location
+  steps: 
+  - intent: LocationIntelligence
+  - action: utter_LCT
 
 
 
