@@ -2,8 +2,12 @@
 <html>
     <body>
         <style>
-            .rw-conversation-container .rw-header{background-color: red;}
-        </style>
+            /* .rw-conversation-container .rw-header{background-color: red;}*/
+        .rw-conversation-container .rw-header{background-color:hsl(229, 69%, 61%);}
+        .rw-conversation-container .rw-messages-container .rw-message .rw-client{background-color: hsl(0, 69%, 61%);}
+        .rw-launcher{background-color: hsl(0, 69%, 61%);}
+        .rw-conversation-container .rw-reply{background-color: hsl(0, 69%, 61%); border: 1px solid hsl(0, 69%, 61%);}
+        </style> 
         <script>!(function () {
             let e = document.createElement("script"),
               t = document.head || document.getElementsByTagName("head")[0];
@@ -18,7 +22,21 @@
                     customData: { language: "en" },
                     socketUrl: "http://localhost:5005",
                     title: "TalkyBot",
-                    subtitle: "Say hi! and get Started",
+                    subtitle: "Say Hi!,we are Talking lands",
+                    profileAvatar: "./assets/svg/logo2.png",
+                    // openLauncherImage: "./assets/svg/comment.svg",
+                    closeImage: "./assets/svg/down.svg",
+                    showMessageDate: true,
+                    inputTextFieldHint: "Real estate has for long been the most favored of all asset classes in India, ceaselessly attracting investors, with the rapid urbanization adding a huge impetus to the market. TalkingLands aims to revolutionize real estate to discover and visualize properties like never before, enabling people to own their dream plot. TalkingLands thus establishes a seamless linkage of demand and supply of real estate, satisfying layout developers and budding landowners alike.",
+                   // embedded: true,
+                    customMessageDelay: (message) => {
+                      let delay = message.length * 40;
+                      if (delay > 3 * 1000) delay = 3 * 1000;
+                      if (delay < 800) delay = 800;
+                      return delay;
+                    }
+
+                    
                     //welcomeMessage: "Hi. How may I help you?"
               
                     // add other props here
