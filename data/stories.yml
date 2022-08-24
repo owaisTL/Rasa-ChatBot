@@ -33,18 +33,96 @@ stories:
 - story: talking lands  path 1
   steps:
   - intent: Talking_lands
-  - action: utter_which_area
+  - action: utter_TL_IS #utter_which_area 
 
-- story: place
-  steps:
-  - intent: area
-  - action: utter_TL_IS
+# - story: place
+#   steps:
+#   - intent: area
+#   - action: utter_TL_IS
   
 
 - story: farms area
   steps:
   - intent: Farms
+  #   entities:
+  #     - farm_type: "farms"
+  # - slot_was_set:
+  #     - farm_type: "farm"
   - action: utter_Farms_area
+
+- story: My_farms to
+  steps:
+  - intent: MY_Farms
+  - action: utter_Farms_TO
+
+
+- story: HosaFarms
+  steps:
+  - intent: Hosachiguru
+  - action: utter_Hosa
+
+- story: MadhuFarms
+  steps:
+  - intent: Madhuvana
+  - action: utter_MadhuF
+
+- story: DhaanviFarms
+  steps:
+  - intent: Dhaanvi
+  - action: utter_DhannviF
+
+
+- story: SambrahmaFarms
+  steps:
+  - intent: Sambrahma
+  - action: utter_SambrahmaF
+
+- story: AbhivrudhiFarms
+  steps:
+  - intent: Abhivrudhi
+  - action: utter_AbhivrudhiF
+
+- story: Eco-habitatFarms
+  steps:
+  - intent: Eco-habitat
+  - action: utter_Eco-habitatF
+
+- story: BristleconeFarms
+  steps:
+  - intent: Bristlecone
+  - action: utter_BristleconeF
+
+- story: AamrutFarms
+  steps:
+  - intent: Aamrut
+  - action: utter_AamrutF
+
+- story: DweepamFarms
+  steps:
+  - intent: Dweepam
+  - action: utter_DweepamF
+
+- story: UnnatiFarms
+  steps:
+  - intent: Unnati
+  - action: utter_UnnatiF
+
+- story: NaturesFarms
+  steps:
+  - intent: NaturesSpring
+  - action: utter_NaturesF
+
+- story: KalipiFarms
+  steps:
+  - intent: Kalipi
+  - action: utter_KalipiF
+
+- story: EOSFarms
+  steps:
+  - intent: Eos
+  - action: utter_EOSF
+
+
 
 
 - story: Resendetials Area
@@ -60,8 +138,13 @@ stories:
 
 - story: Price
   steps:
-  - intent: pricing
-  - action: utter_pricing_is
+  - intent: DEvpricing
+  - action: utter_DEVpricing_is
+
+- story: prop price
+  steps:
+  - intent: prop_pricing
+  - action: utter_PropPricing
 
 - story: payment_is
   steps:
@@ -85,6 +168,11 @@ stories:
   - intent: TL_Lens_Move
   - action: utter_lens_Move
 
+
+- story: Location
+  steps: 
+  - intent: LocationIntelligence
+  - action: utter_LCT
 
 
 
@@ -119,10 +207,10 @@ stories:
 
 
 
-- story: plot Booking
-  steps:
-  - intent: Book_plot
-  - action: utter_BOOK_PLOT
+# - story: plot Booking
+#   steps:
+#   - intent: Book_plot
+#   - action: utter_BOOK_PLOT
 
 - story: plot canal
   steps:

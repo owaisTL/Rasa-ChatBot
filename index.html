@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
+  <link  rel="stylesheet" href="chatbot.css"/>
     <body>
+
+<!-- <img class="chat-bot" src="/assets/svg/ChatBot.svg"/>
+<p class="click-mic">Click the Bot</p> -->
+
+
+
         <style>
-            .rw-conversation-container .rw-header{background-color: red;}
-        </style>
+        .rw-conversation-container .rw-header{background-color: #082032}
+        .rw-conversation-container .rw-messages-container .rw-message .rw-client{background-color: #082032}
+        .rw-launcher{background-color: #FFFFFF} 
+        .rw-conversation-container .rw-reply{background-color: hsl(0, 69%, 61%); border: 1px solid hsl(0, 69%, 61%);} 
+        </style> 
         <script>!(function () {
             let e = document.createElement("script"),
               t = document.head || document.getElementsByTagName("head")[0];
@@ -17,8 +27,22 @@
                     initpayload:'/greet',
                     customData: { language: "en" },
                     socketUrl: "http://localhost:5005",
-                    title: "TalkyBot",
-                    subtitle: "Say hi! and get Started",
+                    title: "Talky",
+                    subtitle: "Say Hi!,we are Talking lands",
+                    profileAvatar: "./assets/svg/logo2.png",
+                    openLauncherImage: "./assets/svg/globe-revolution.gif",
+                    closeImage: "./assets/svg/down.svg",
+                    showMessageDate: true,
+                    inputTextFieldHint: "What's on your mind? you can share with us.",
+                   // embedded: true,
+                    customMessageDelay: (message) => {
+                      let delay = message.length * 40;
+                      if (delay > 3 * 1000) delay = 3 * 1000;
+                      if (delay < 800) delay = 800;
+                      return delay;
+                    }
+
+                    
                     //welcomeMessage: "Hi. How may I help you?"
               
                     // add other props here

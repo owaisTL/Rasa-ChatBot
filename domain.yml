@@ -13,7 +13,7 @@ intents:
   - Farms
   - resedentials
   - TL_login
-  - pricing
+  - DEvpricing
   - payment
   - TL_TALES
   - TL_Lens 
@@ -23,17 +23,61 @@ intents:
   - Company
   - Teams
   - TL_Support  
-  - Book_plot
   - canal
   - Diff_Color
   - facing
-  - area
+  #- area
+  - LocationIntelligence
+  - MY_Farms
+  - Hosachiguru
+  - prop_pricing
+  #- query_knowledge_base
+  
+  - Madhuvana
+  - Dhaanvi
+  - Sambrahma 
+  - Abhivrudhi
+  - Eco-habitat
+  - Bristlecone
+  - Aamrut
+  - Dweepam
+  - Unnati
+  - NaturesSpring
+  - Kalipi
+  - Eos
+
+# entities:
+#   - farm_type
+#   - City_type
+
+
+
+
+# forms:
+#   name_form:
+#     first_name:
+#     - type: from_text
+#     last_name:
+#     - type: from_text
+# slots:
+#   farm_type:
+#     type: text
+    # influence_conversation: true
+#   last_name:
+#     type: text
+#     influence_conversation: true
 
 
 responses:
 
   utter_greet:
-  - text: "Hey! How may I help you?"
+    # buttons:
+    # - payload: happy
+    #   title: happy
+
+    # - payload: sad
+    #   title: sad
+  - text: "Hey! How may I assist you?"
 
 
   
@@ -52,18 +96,18 @@ responses:
 
 
   utter_goodbye:
-  - text: "alright! hope see you soon!"
+  - text: "Thank you for chatting with us. We are right here if you need us for anything."
 
 
   utter_iamabot:
-  - text: "I am  TalkyBot by Talking Lands."
+  - text: "I am  TalkyBot by TalkingLands."
 
-  utter_which_area:
-  - text: "At which city are you looking for property"
+  # utter_which_area:
+  # - text: "In which city are you looking for property"
 
 
   utter_TL_IS:
-  - text: "what kind of properties are you interested in? Farms/Resdedntials"
+  - text: "What kind of properties are you interested in, Farm plots or Residential plots?"
 
 
   
@@ -76,56 +120,106 @@ responses:
   - text: "https://talkinglands.com/plots?Layouttype=CT1"
 
   utter_TL_login:
-  - text: "click here! https://talkinglands.com/Login"
+  - text: "Click here! https://talkinglands.com/Login"
 
-  utter_pricing_is:
-  - text: "click here! https://talkinglands.com/Pricing"
+  utter_DEVpricing_is:
+  - text: "Click here! https://talkinglands.com/Pricing"
+
+  utter_PropPricing:
+  - text: "Well! You can enable the price filter and look for properties"
   
   utter_pay_is:
-  - text: "click here to pay! https://talkinglands.com/Pricing"
+  - text: "Click here to pay! https://talkinglands.com/Pricing"
 
 
   utter_tales:
-  - text: "Click here to view the tutorial - https://talkinglands.com/OurFeatures"
+  - text: "Click here to view the tutorial - https://talkinglands.com/OurFeatures "
 
   utter_lens:
   - text: "Click here to view the tutorial on how to use the TL Lens feature - https://talkinglands.com/OurFeatures"
+
+  utter_LCT:
+  - text: "Yes; you can access Location Intelligence here - https://talkinglands.com/OurFeatures"
+
+  utter_Farms_TO:
+  - text: "Please specify the name your farm"
+
+  utter_Hosa:
+  - text: "https://hosachiguru.talkinglands.com/plots?Layouttype=CT0"
+
+  utter_MadhuF:
+  - text: "Click here! https://hosachiguru.talkinglands.com/plots/HC-MDV "
+  utter_DhannviF:
+  - text: "Click here! https://hosachiguru.talkinglands.com/plots/HC-DHN "
+  utter_SambrahmaF:
+  - text: "Click here! https://hosachiguru.talkinglands.com/plots/HC-SAM "
+  utter_AbhivrudhiF:
+  - text: "Click here! https://hosachiguru.talkinglands.com/plots/HC-ABV "
+  utter_Eco-habitatF:
+  - text: "Click here! https://hosachiguru.talkinglands.com/plots/HC-ECH "
+  utter_BristleconeF:
+  - text: "Click here! https://hosachiguru.talkinglands.com/plots/HC-BCN "
+  utter_AamrutF:
+  - text: "This Project will be launched soon! "
+  utter_DweepamF:
+  - text: "This Project will be launched soon! "
+  utter_UnnatiF:
+  - text: "This Project will be launched soon! "
+  utter_NaturesF:
+  - text: "This Project is completed https://hosachiguru.talkinglands.com/plots/HC-NSP "
+  utter_KalipiF:
+  - text: "This Project is completed https://hosachiguru.talkinglands.com/plots/HC-UHK "
+  utter_EOSF:
+  - text: "This Project is completed. https://hosachiguru.talkinglands.com/plots/HC-EOS  "
+
+
   
   utter_lens_Move:
-  - text: "yes; you can"
+  - text: "Yes, you can"
 
   utter_Contacts:
-  - text: "get in touch with us! https://talkinglands.com/Contact"
+  - text: "Get in touch with us! https://talkinglands.com/Contact"
 
 
   utter_TL_About_is:
-  - text: "what would you like  to know?  about  company or our Team?"
+  - text: "Would you like to know about our company or our team?"
 
   utter_TL_company_is:
   - text: "https://talkinglands.com/Ourcompany"
 
   utter_TL_Teams_is:
-  - text: "https://talkinglands.com/Ourteam"
+  - text: "Here is the link to our website https://talkinglands.com/Ourteam"
+  #- text: "Please click this link [TL TEAMS](https://talkinglands.com/Ourteam)."
+  #- text: <a href="%https://talkinglands.com/Ourteam%">%https://talkinglands.com/Ourteam%</a>
+  #- [I'm an inline-style link]("https://talkinglands.com/Ourteam")
+  #- text: <a href="https://talkinglands.com/Ourteam">Link</a>
+  #- [url](https://talkinglands.com/Ourteam)
 
-  utter_TL_Support:
-  - text: "mail us at support@gims.co"
-  - text: " call us @ 8549949999"
+  utter_TL_Support:  
+  - text: "support@talkinglands.com"
+  - text: " call us @ 08068970575"
 
 
-  utter_BOOK_PLOT:
-  - text: "we will add soon"
+  # utter_BOOK_PLOT:
+  # - text: "we will add soon"
 
   utter_BOOK_canal:
-  - text: " yes, click here! https://hosachiguru.talkinglands.com/plots/HC-SAM https://hosachiguru.talkinglands.com/plots/HC-DHN https://hosachiguru.talkinglands.com/plots/HC-ABV https://hosachiguru.talkinglands.com/plots/HC-ECH"
+  - text: " Yes, click here! https://hosachiguru.talkinglands.com/plots/HC-SAM https://hosachiguru.talkinglands.com/plots/HC-DHN https://hosachiguru.talkinglands.com/plots/HC-ABV https://hosachiguru.talkinglands.com/plots/HC-ECH"
 
   utter_DColour:
-  - text: "Green- Available  Yellow- Soft Blocked Purple- Blocked Orange- Reserved Red- Sold"
+  - text: "Green - Available; Yellow - Soft Blocked; Purple - Blocked; Orange - Reserved; Red - Sold"
 
   utter_FaceTo:
-  - text: "Yes;You can filter on the basis of facing." 
+  - text: "Yes; you can filter on the basis of facing." 
 
-
-
+  # utter_ask_first_name:
+  # - text: What is your first name?
+  # utter_ask_last_name:
+  # - text: What is your last name?
+  # utter_submit:
+  # - text: Ok. Thanks!
+  # utter_slots_values:
+  # - text: I will remember that your name is {first_name} {last_name}!
 
 
 session_config:

@@ -11,7 +11,7 @@
 # https://rasa.com/docs/rasa/custom-actions
 
 action_endpoint:
-  url: "http://localhost:5055/webhook"
+  url: "http://localhost:5005"
 
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
@@ -36,10 +36,7 @@ action_endpoint:
 # https://rasa.com/docs/rasa/event-brokers
 
 #event_broker:
-event_broker:
-  type: kafka
-  partition_by_sender: True
-  security_protocol: PLAINTEXT
-  topic: topic
-  url: "http://localhost:5055/webhook"
-  client_id: kafka-python-rasa
+#  url: localhost
+#  username: username
+#  password: password
+#  queue: queue
